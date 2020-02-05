@@ -1,0 +1,159 @@
+header {
+            z-index: 1;
+        }
+        header .flexed__header{
+                z-index: 4;
+        }
+        .flexed__header{
+             z-index: 4;
+        }
+        header .content {
+            padding-top: 24px;
+            padding-bottom: 22px;
+            background: #000000;
+            /*border-bottom: 1px solid #3f0924;*/
+            left: 0;
+            width: 100%;
+            margin: 0;
+            outline: none;
+            /*box-sizing: border-box;*/
+            max-width: 1780px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 0 auto;
+        }
+        header .logo a {
+            text-decoration: none;
+        }
+        header .right ul {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            list-style: none;
+            padding-top: 19px;
+        }
+
+        header .right ul li {
+            margin-right: 50px;
+        }
+
+        header .right ul li a {
+            color: #f4dc96;
+            font-family: "HelveticaNeueLTPro";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 17px;
+            text-decoration: none;
+            display: block;
+        }
+
+        header .right ul li:last-child {
+            margin-right: 0;
+        }
+
+        header .right .mobile_button {
+            display: none;
+            width: 45px;
+            height: 45px;
+            position: relative;
+        }
+
+        header .right .mobile_button span {
+            position: absolute;
+            width: 100%;
+            background-color: #ffffff;
+            height: 2px;
+            left: 0;
+            top: calc(50% - 1px);
+            transition: .3s all ease-in-out;
+        }
+
+        header .right .mobile_button span::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            background: #ffffff;
+            height: 2px;
+            left: 0;
+            bottom: -15px;
+            transition: .3s all ease-in-out;
+        }
+
+        header .right .mobile_button span::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            background: #ffffff;
+            height: 2px;
+            left: 0;
+            top: -15px;
+            transition: .3s all ease-in-out;
+        }
+
+        header .right .mobile_button.active span {
+            background-color: transparent;
+        }
+
+        header .right .mobile_button.active span::after {
+            transform: rotate(-45deg);
+            bottom: 0;
+        }
+
+        header .right .mobile_button.active span::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        @media screen and (max-width: 750px) {
+            header .right ul {
+                position: fixed;
+                top: 96px;
+                width: 100%;
+                height: calc(100vh - 96px);
+                left: -100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                transition: .3s all ease-in-out;
+                background: #000000;
+                text-align: center;
+                padding-top: 0;
+            }
+
+            header .right ul.active {
+                left: 0;
+            }
+
+            header .right .mobile_button {
+                display: block;
+            }
+
+            header .right ul li {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            header .right ul li a {
+                font-size: 24px;
+                line-height: 24px;
+            }
+            header .content{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 4;
+                padding: 0 15px;
+                padding-top: 24px;
+                padding-bottom: 22px;
+            }
+
+            .welcome__header .line--running {
+                margin-top: 100px;
+            }
+        }
+    .line--running {
+        z-index: 1;
+        top: 7em;
+    }
